@@ -91,5 +91,10 @@ class AutoAuth(rumps.App):
 
 
 if __name__ == '__main__':
-    app = AutoAuth()
-    app.run()
+    try:
+        app = AutoAuth()
+        app.run()
+    except Exception as e:
+        print(e.args)
+        print(str(e))
+        print(repr(e))

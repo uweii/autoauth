@@ -13,8 +13,10 @@ def find_my_icon_click(img, exec_once):
     while (True):
         result = find_icon(img)
         if result is None:
+            print("missed ", img)
             time.sleep(0.01)
         else:
+            print(result)
             x, y = result
             pyautogui.moveTo(x * 0.5, y * 0.5, 0.5)
             pyautogui.click()
